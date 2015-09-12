@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - BadGuy
   - Bullet
   - New Tag
+=======
+  - Floor
+>>>>>>> 8c9c8209b64e3dabf0ffaef81b9a8e7d4a901729
   layers:
   - Default
   - TransparentFX
