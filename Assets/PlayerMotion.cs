@@ -64,6 +64,8 @@ public class PlayerMotion : MonoBehaviour {
             dead = false;
             gliding = false;
             jumpCount = 0;
+			GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>().CurrentHealth =
+				GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>().Health;
         }
 	}
 
