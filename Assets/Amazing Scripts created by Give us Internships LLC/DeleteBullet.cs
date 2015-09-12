@@ -5,7 +5,7 @@ public class DeleteBullet : MonoBehaviour {
 	float lifetime;
 	// Use this for initialization
 	void Start () {
-		lifetime = 1.0f;
+		lifetime = 10.0f;
 		Destroy (gameObject,lifetime);
 	}
 	
