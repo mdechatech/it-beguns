@@ -96,6 +96,7 @@ GameObject:
   - 222: {fileID: 310554402}
   - 114: {fileID: 310554401}
   - 114: {fileID: 310554404}
+  - 225: {fileID: 310554405}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -169,6 +170,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc31197ab8e471429bc866b335dce31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &310554405
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310554400}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &710152336
 GameObject:
   m_ObjectHideFlags: 0
