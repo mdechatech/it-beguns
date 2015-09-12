@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509a9f7548c14ae4d8d39d699131d146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 103750, guid: b57bd5f822d62d34a9a326d8a423db43, type: 2}
   projectileSpeed: 0
   fireRate: -.200000003
 --- !u!114 &11490918
@@ -167,15 +167,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45ebcd9ea14a7349807995c0d29d255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .100000001
+  moveSpeed: 0
   jumpSpeed: 360
-  glideSpeed: 0
+  glideSpeed: -1.5
   maxJumps: 0
   jumpCount: 0
   gliding: 0
   dead: 0
   rb: {fileID: 5046734}
   spawn: {fileID: 0}
+  temp: 0
+  canGlide: 0
 --- !u!124 &12467464
 Behaviour:
   m_ObjectHideFlags: 1

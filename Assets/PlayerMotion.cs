@@ -15,6 +15,10 @@ public class PlayerMotion : MonoBehaviour {
 
     public Rigidbody2D rb;
     public GameObject spawn;
+
+    public int temp = 0;
+    public bool canGlide;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,6 +26,9 @@ public class PlayerMotion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        ModifyAbilities();
+
+
         float horzMove = Input.GetAxis("Horizontal") * moveSpeed;
         transform.Translate(horzMove, 0, 0);
 
@@ -34,7 +41,7 @@ public class PlayerMotion : MonoBehaviour {
         else if (jumpCount == maxJumps && Input.GetKeyDown(KeyCode.W))
             gliding = true;
 
-        if (gliding && Input.GetKey(KeyCode.W))
+        if (canGlide && gliding && Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector2(0, glideSpeed);
         }
@@ -55,5 +62,18 @@ public class PlayerMotion : MonoBehaviour {
     {
         if (c.gameObject.tag == "Floor" && c.contacts[0].normal.x == 0)
             jumpCount = 0;
+    }
+
+    void ModifyAbilities()
+    {
+        switch (temp)
+        {
+            case 1: moveSpeed = .1F;
+                break;
+            case 2: maxJumps = 1;
+                break;
+            case 6: maxJumps = 2;
+                break;
+        }
     }
 }
