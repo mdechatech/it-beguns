@@ -81,18 +81,18 @@ public class PlayerMotion : MonoBehaviour {
             moveSpeed = .1F;
         if (temp >= 3)
             maxJumps = 1;
-        if (temp >= 6)
+        if (temp >= 5)
             maxJumps = 2;
-        if (temp >= 7)
+        if (temp >= 6)
             canGlide = true;
 
         if (m.Wins >= 1)
             moveSpeed = .1F;
         if (m.Wins >= 3)
             maxJumps = 1;
-        if (m.Wins >= 6)
+        if (m.Wins >= 5)
             maxJumps = 2;
-        if (m.Wins >= 7)
+        if (m.Wins >= 6)
             canGlide = true;
     }
 }
