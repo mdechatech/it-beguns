@@ -864,27 +864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409348, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-      propertyPath: FireAmount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-      propertyPath: FireRate
-      value: .375
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-      propertyPath: FireSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11495776, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-      propertyPath: Health
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-      propertyPath: FireSpread
-      value: 90
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
