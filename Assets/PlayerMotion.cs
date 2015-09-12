@@ -44,7 +44,7 @@ public class PlayerMotion : MonoBehaviour {
         {
             rb.AddForce(Vector2.up * jumpSpeed);
             jumpCount++;
-			AudioSource.PlayClipAtPoint(hop, Camera.main.transform.position,.5f);
+			AudioSource.PlayClipAtPoint(hop, Camera.main.transform.position,.2f);
         }
         else if (jumpCount == maxJumps && Input.GetKeyDown(KeyCode.W))
             gliding = true;
