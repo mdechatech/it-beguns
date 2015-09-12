@@ -4,6 +4,8 @@ using UnityEngine.Events;
 
 public class Boss : MonoBehaviour
 {
+    [SerializeField] private string _bulletTag = "Bullet";
+
     [SerializeField]
     private GameObject _player;
 
@@ -15,10 +17,9 @@ public class Boss : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider2D)
     {
-        var bullet = collider2D.GetComponent<Bullet>();
-        if (bullet == null) return;
+        if (collider2D.tag != _bulletTag) return;
 
-        Destroy(bullet.gameObject);
+        Destroy(collider2D.gameObject);
         --Health;
 
         if (Health <= 0)
