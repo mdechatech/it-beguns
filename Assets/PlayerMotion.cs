@@ -19,6 +19,8 @@ public class PlayerMotion : MonoBehaviour {
     public int temp = 0;
     public bool canGlide;
 
+    public Manager m;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -67,6 +69,18 @@ public class PlayerMotion : MonoBehaviour {
     void ModifyAbilities()
     {
         switch (temp)
+        {
+            case 1:
+                moveSpeed = .1F;
+                break;
+            case 2:
+                maxJumps = 1;
+                break;
+            case 6:
+                maxJumps = 2;
+                break;
+        }
+        switch (m.Wins)
         {
             case 1: moveSpeed = .1F;
                 break;
