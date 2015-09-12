@@ -28,14 +28,7 @@ public class Manager : MonoBehaviour
     public void OnLevelWasLoaded(int level)
     {
         FindCharacters();
-        if (Boss != null)
-        {
-            GameUI.gameObject.SetActive(true);
-        }
-        else
-        {
-            GameUI.gameObject.SetActive(false);
-        }
+        GameUI.GetComponent<Canvas>().enabled = Boss != null;
     }
 
     public void FindCharacters()
@@ -59,6 +52,7 @@ public class Manager : MonoBehaviour
 	void Start ()
 	{
         FindCharacters();
+        GameUI.GetComponent<Canvas>().enabled = Boss != null;
 	}
 	
 	// Update is called once per frame

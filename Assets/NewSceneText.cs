@@ -3,9 +3,17 @@ using System.Collections;
 
 public class NewSceneText : MonoBehaviour {
 	CanvasGroup canvas;
+    private Manager _manager;
 	bool fadeIn = false;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
+	    _manager = GameObject.FindGameObjectWithTag("Manager")
+	        .GetComponent<Manager>();
+	    if (_manager != null && _manager.Boss != null)
+	    {
+	        _manager.Boss.gameObject.SetActive(false);
+	    }
 		canvas = GetComponent<CanvasGroup> ();
 		canvas.alpha = 0f;
 	}
@@ -27,6 +35,16 @@ public class NewSceneText : MonoBehaviour {
 
 		if (fadeIn == true && canvas.alpha <= .75f) {
 			canvas.alpha -=.02f;
-		} 
+		}
+
+	    if (canvas.alpha <= 0.0f)
+	    {
+            if (_manager != null && _manager.Boss != null)
+            {
+                _manager.Boss.gameObject.SetActive(true);
+            }
+
+            Destroy(gameObject);
+	    }
 	}
 }
