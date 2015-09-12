@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - Boss
   - Manager
+  - Spawn
   layers:
   - Default
   - TransparentFX

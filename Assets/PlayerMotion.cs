@@ -23,8 +23,9 @@ public class PlayerMotion : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+        m = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
+        spawn = GameObject.FindGameObjectWithTag("Spawn");
+    }
 	
 	// Update is called once per frame
 	void Update () {

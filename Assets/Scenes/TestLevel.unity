@@ -65,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -84,9 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!127 &5
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!1 &3573811
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +299,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -673,11 +672,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 409348, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.73999977
+      value: .569999993
       objectReference: {fileID: 0}
     - target: {fileID: 409348, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.460000008
+      value: -.150000006
       objectReference: {fileID: 0}
     - target: {fileID: 409348, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -833,6 +832,9 @@ MonoBehaviour:
   dead: 0
   rb: {fileID: 641951796}
   spawn: {fileID: 0}
+  temp: 0
+  canGlide: 0
+  m: {fileID: 0}
 --- !u!114 &641951801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,7 +1890,7 @@ GameObject:
   - 4: {fileID: 1289764588}
   m_Layer: 0
   m_Name: SpawnPoint
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
