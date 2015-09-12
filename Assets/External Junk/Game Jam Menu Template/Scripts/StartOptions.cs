@@ -24,6 +24,7 @@ public class StartOptions : MonoBehaviour {
 	private float fastFadeIn = .01f;									//Very short fade time (10 milliseconds) to start playing music immediately without a click/glitch
 	private ShowPanels showPanels;										//Reference to ShowPanels script on UI GameObject, to show and hide panels
 
+    [SerializeField] public Manager Manager;
 	
 	void Awake()
 	{
@@ -98,7 +99,7 @@ public class StartOptions : MonoBehaviour {
 
 		Debug.Log ("Game started in same scene! Put your game starting stuff here.");
 
-
+        Manager.NextLevel();
 	}
 
 
