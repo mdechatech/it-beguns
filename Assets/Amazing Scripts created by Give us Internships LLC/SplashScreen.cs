@@ -13,5 +13,8 @@ public class SplashScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		canvas.alpha -= .1f;
+		if (canvas.alpha == 0f) {
+			Application.LoadLevel (1);
+		}
 	}
 }
