@@ -19,6 +19,10 @@ public class Shotgun : MonoBehaviour
 	void Start ()
 	{
 	    _fireTimer = 0.0f;
+	    if (Target == null)
+	    {
+	        Target = GameObject.FindGameObjectWithTag("Player");
+	    }
 	}
 	
 	// Update is called once per frame
@@ -34,7 +38,7 @@ public class Shotgun : MonoBehaviour
 
     public void Fire()
     {
-        if (!CanFire) return;
+        if (!CanFire || Target == null) return;
         _fireTimer = 0.0f;
 
         var targetVector = Target.transform.position - transform.position;
