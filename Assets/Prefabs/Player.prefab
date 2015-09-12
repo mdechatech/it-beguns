@@ -33,6 +33,8 @@ GameObject:
   - 247: {fileID: 24786842}
   - 114: {fileID: 11490918}
   - 114: {fileID: 11426448}
+  - 114: {fileID: 11476672}
+  - 114: {fileID: 11429672}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -156,6 +158,28 @@ MonoBehaviour:
   bullet: {fileID: 103750, guid: b57bd5f822d62d34a9a326d8a423db43, type: 2}
   projectileSpeed: 0
   fireRate: -.200000003
+--- !u!114 &11429672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc849e7575eebd42897b1daed0713d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11476672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c622b943b23753408da550f36d1b680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +203,9 @@ MonoBehaviour:
   temp: 0
   canGlide: 0
   m: {fileID: 0}
+  hop: {fileID: 0}
+  glide: {fileID: 0}
+  time: 1
 --- !u!124 &12467464
 Behaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +237,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fe225fb3a210a4ced8714e4104b84d4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!247 &24786842
 ConstantForce2D:
@@ -233,6 +260,11 @@ Prefab:
       propertyPath: m
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe225fb3a210a4ced8714e4104b84d4f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179948}

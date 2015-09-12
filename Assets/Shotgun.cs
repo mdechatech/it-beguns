@@ -55,6 +55,7 @@ public class Shotgun : MonoBehaviour
         var bullet = Instantiate(Bullet);
         bullet.transform.position = transform.position;
         bullet.tag = "EnemyBullet";
+        bullet.layer = 10;
 
         var rigidbody2D = bullet.GetComponent<Rigidbody2D>();
         rigidbody2D.velocity = (new Vector2(Mathf.Cos(angle), Mathf.Sin(angle))) * FireSpeed;

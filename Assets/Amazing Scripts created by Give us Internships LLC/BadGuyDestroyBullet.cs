@@ -12,10 +12,11 @@ public class BadGuyDestroyBullet : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnCollisionEnter2D(Collision2D Bullet){
-		if (Bullet.gameObject.tag == "Bullet") {
+	void OnTriggerEnter2D(Collider2D Bullet){
+	    Debug.Log("NIce shot dawg");
+		if (Bullet.gameObject.tag == "EnemyBullet") {
 			Destroy(Bullet.gameObject);
-			Debug.Log("NIce shot dawg");
+
 			
 			//Call a method in the object to remove boss health
 			//Then do an if statement asking if(blahblahblah.getHealth() <= 0) then Destroy(badGuy.gameObject) I THINK????
