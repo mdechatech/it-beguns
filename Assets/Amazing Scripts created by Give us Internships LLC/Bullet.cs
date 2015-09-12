@@ -20,4 +20,12 @@ public class Bullet : MonoBehaviour {
 
 		}
 	}
+	void onHitBadGuy(Collider badGuy){
+		if (badGuy.tag == "Boss") {
+			//Instantiate new boss object
+			//Call a method in the object to remove boss health
+			//Then do an if statement asking if(blahblahblah.getHealth() <= 0) then Destroy(badGuy.gameObject) I THINK????
+		}
+	}
+
 }
