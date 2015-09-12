@@ -13,6 +13,8 @@ public class Boss : MonoBehaviour
     [SerializeField]
     public int Health = 20;
 
+    [SerializeField] public int CurrentHealth;
+
     [SerializeField] 
     public UnityEvent OnDeath;
 
@@ -28,6 +30,7 @@ public class Boss : MonoBehaviour
     public void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        CurrentHealth = Health;
     }
 
     public void OnTriggerEnter2D(Collider2D collider2D)
@@ -35,7 +38,7 @@ public class Boss : MonoBehaviour
         if (collider2D.tag != _bulletTag) return;
 
         Destroy(collider2D.gameObject);
-        --Health;
+        --CurrentHealth;
 
         OnHit.Invoke();
         if (OnHitEvent != null)
@@ -45,9 +48,9 @@ public class Boss : MonoBehaviour
 
         _spriteRenderer.color = new Color(1.0f, 0.5f, 0.5f, 1.0f);
 
-        if (Health <= 0)
+        if (CurrentHealth <= 0)
         {
-            Health = 0;
+            CurrentHealth = 0;
             OnDeath.Invoke();
             if (OnDeathEvent != null) OnDeathEvent(this, EventArgs.Empty);
         }

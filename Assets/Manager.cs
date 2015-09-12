@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
 
     [SerializeField] public GameObject Player;
     [SerializeField] public Boss Boss;
+    [SerializeField] public GameUI GameUI;
 
     public UnityAction BossDied;
 
@@ -27,6 +28,14 @@ public class Manager : MonoBehaviour
     public void OnLevelWasLoaded(int level)
     {
         FindCharacters();
+        if (Boss != null)
+        {
+            GameUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            GameUI.gameObject.SetActive(false);
+        }
     }
 
     public void FindCharacters()
