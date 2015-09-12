@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 103750, guid: b57bd5f822d62d34a9a326d8a423db43, type: 2}
   projectileSpeed: 0
+  fireRate: 0
 --- !u!247 &77802605
 ConstantForce2D:
   m_ObjectHideFlags: 0
