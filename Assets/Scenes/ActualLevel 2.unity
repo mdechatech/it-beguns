@@ -1222,6 +1222,14 @@ Prefab:
       propertyPath: FireRate
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
+      propertyPath: FireSpread
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495776, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
   m_IsPrefabParent: 0

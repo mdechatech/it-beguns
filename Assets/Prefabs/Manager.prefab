@@ -44,6 +44,7 @@ MonoBehaviour:
   - ActualLevel 3
   - ActualLevel 4
   - ActualLevel 2
+  - ActualLevel 5
   Player: {fileID: 0}
   Boss: {fileID: 0}
   GameUI: {fileID: 0}

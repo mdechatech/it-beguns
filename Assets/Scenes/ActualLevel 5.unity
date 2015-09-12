@@ -431,7 +431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The Retaliation Begins
+  m_Text: 'The Spikes Begin
 
 '
 --- !u!222 &1630613014
@@ -524,7 +524,7 @@ RectTransform:
   m_Children:
   - {fileID: 1630613010}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -868,11 +868,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: FireAmount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: FireRate
-      value: .5
+      value: .375
       objectReference: {fileID: 0}
     - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: FireSpeed
@@ -880,7 +880,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11495776, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
       propertyPath: Health
-      value: 12
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
+      propertyPath: FireSpread
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
