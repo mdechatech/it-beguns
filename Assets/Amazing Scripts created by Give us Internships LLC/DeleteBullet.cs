@@ -6,7 +6,7 @@ public class DeleteBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		lifetime = 1.0f;
-		Destroy (this,lifetime);
+		Destroy (gameObject,lifetime);
 	}
 	
 	// Update is called once per frame
