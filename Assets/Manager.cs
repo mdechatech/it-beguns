@@ -19,12 +19,12 @@ public class Manager : MonoBehaviour
 
     public void OnLevelWasLoaded(int level)
     {
-        if (!Player.gameObject)
+        if (Player == null || !Player.gameObject)
         {
             Player = GameObject.FindGameObjectWithTag("Player");
         }
 
-        if (!Boss.gameObject)
+        if (Boss == null || !Boss.gameObject)
         {
             Boss = GameObject.FindGameObjectWithTag("Boss")
                 .GetComponent<Boss>();
@@ -34,6 +34,18 @@ public class Manager : MonoBehaviour
 
 	void Start () {
 	    DontDestroyOnLoad(gameObject);
+
+        if (Player == null || !Player.gameObject)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        if (Boss == null || !Boss.gameObject)
+        {
+            Boss = GameObject.FindGameObjectWithTag("Boss")
+                .GetComponent<Boss>();
+            Boss.OnDeathEvent += OnBossDeath;
+        }
 	}
 	
 	// Update is called once per frame

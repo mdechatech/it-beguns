@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
 
@@ -15,6 +16,9 @@ public class Boss : MonoBehaviour
     [SerializeField] 
     public UnityEvent OnDeath;
 
+    [HideInInspector]
+    public event EventHandler<EventArgs> OnDeathEvent;
+
     public void OnTriggerEnter2D(Collider2D collider2D)
     {
         if (collider2D.tag != _bulletTag) return;
@@ -25,6 +29,7 @@ public class Boss : MonoBehaviour
         if (Health <= 0)
         {
             OnDeath.Invoke();
+            if (OnDeathEvent != null) OnDeathEvent(this, EventArgs.Empty);
         }
     }
 }
