@@ -13,4 +13,9 @@ public class DeleteBullet : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        if(collider2D.tag == "Floor") Destroy(gameObject);
+    }
 }
