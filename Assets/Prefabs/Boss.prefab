@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 409348}
   - 114: {fileID: 11495776}
   - 212: {fileID: 21279694}
+  - 61: {fileID: 6193702}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -29,6 +30,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6193702
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155310}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.58999991, y: 1.94000006}
 --- !u!114 &11495776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40,9 +54,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceb73d12ce7d444da65d798c80812be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bulletTag: Bullet
   _player: {fileID: 0}
   Health: 0
   OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnHit:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
