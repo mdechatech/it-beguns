@@ -75,26 +75,18 @@ public class PlayerMotion : MonoBehaviour {
 
     void ModifyAbilities()
     {
-        switch (temp)
-        {
-            case 1:
-                moveSpeed = .1F;
-                break;
-            case 2:
-                maxJumps = 1;
-                break;
-            case 6:
-                maxJumps = 2;
-                break;
-        }
-        switch (m.Wins)
-        {
-            case 1: moveSpeed = .1F;
-                break;
-            case 2: maxJumps = 1;
-                break;
-            case 6: maxJumps = 2;
-                break;
-        }
+        if (temp >= 1)
+            moveSpeed = .1F;
+        if (temp >= 3)
+            maxJumps = 1;
+        if (temp >= 6)
+            maxJumps = 2;
+
+        if (m.Wins >= 1)
+            moveSpeed = .1F;
+        if (m.Wins >= 3)
+            maxJumps = 1;
+        if (m.Wins >= 6)
+            maxJumps = 2;
     }
 }

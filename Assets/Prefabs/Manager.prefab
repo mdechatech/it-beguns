@@ -40,8 +40,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelOrder:
-  - TestLevel
-  - TestLevel2
+  - ActualLevel
+  - ActualLevel 3
+  - ActualLevel 4
+  - ActualLevel 2
   Player: {fileID: 0}
   Boss: {fileID: 0}
   GameUI: {fileID: 0}
