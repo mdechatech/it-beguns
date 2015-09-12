@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 	public GameObject bullet;
 	public float projectileSpeed;
-	public float fireRate = -.2f;
+	public float fireRate = -.35f;
 	// Use this for initialization
 	void Start () {
 		projectileSpeed = 30f;
@@ -14,8 +14,8 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 
 		if(Time.time>=fireRate){
-			if (Input.GetMouseButtonDown (0)) {
-				fireRate = Time.time + .2f;
+			if (Input.GetButton("Fire1")) {
+				fireRate = Time.time + .35f;
 				Vector2 target = Camera.main.ScreenToWorldPoint( new Vector2(Input.mousePosition.x, Input.mousePosition.y) );
 				Vector2 myPos = new Vector2(transform.position.x,transform.position.y + 1);
 				Vector2 direction = target - myPos;
