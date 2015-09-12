@@ -8,6 +8,8 @@ TagManager:
   - New Tag
   - Floor
   - EnemyBullet
+  - Boss
+  - Manager
   layers:
   - Default
   - TransparentFX

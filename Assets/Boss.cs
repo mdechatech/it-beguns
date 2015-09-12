@@ -43,7 +43,7 @@ public class Boss : MonoBehaviour
             OnHitEvent(this, EventArgs.Empty);
         }
 
-        _spriteRenderer.color = new Color(1.0f, 0.75f, 0.75f, 1.0f);
+        _spriteRenderer.color = new Color(1.0f, 0.5f, 0.5f, 1.0f);
 
         if (Health <= 0)
         {

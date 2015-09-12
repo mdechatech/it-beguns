@@ -28,6 +28,7 @@ public class Shotgun : MonoBehaviour
 	    if (_fireTimer >= FireRate)
 	    {
 	        CanFire = true;
+	        Fire();
 	    }
 	}
 
@@ -37,11 +38,11 @@ public class Shotgun : MonoBehaviour
         _fireTimer = 0.0f;
 
         var targetVector = Target.transform.position - transform.position;
-        var targetAngle = Mathf.Atan2(targetVector.y, targetVector.x)*Mathf.Rad2Deg - FireSpread/2;
+        var angleMin = Mathf.Atan2(targetVector.y, targetVector.x) * Mathf.Rad2Deg - FireSpread / 2;
+        var angleMax = angleMin + FireSpread;
         for (var i = 0; i < FireAmount; i++)
         {
-            FireBullet(targetAngle * Mathf.Deg2Rad);
-            targetAngle += FireSpread/FireAmount;
+            FireBullet(Random.Range(angleMin, angleMax) * Mathf.Deg2Rad);
         }
     }
 

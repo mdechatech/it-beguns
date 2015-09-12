@@ -11,9 +11,10 @@ GameObject:
   - 114: {fileID: 11495776}
   - 212: {fileID: 21279694}
   - 61: {fileID: 6193702}
+  - 114: {fileID: 11458994}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +44,24 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.58999991, y: 1.94000006}
+--- !u!114 &11458994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89baa484dc68a9469935df8b14dd95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 103750, guid: b57bd5f822d62d34a9a326d8a423db43, type: 2}
+  Target: {fileID: 0}
+  FireRate: .200000003
+  FireAmount: 5
+  FireSpread: 90
+  FireSpeed: 20
+  CanFire: 0
 --- !u!114 &11495776
 MonoBehaviour:
   m_ObjectHideFlags: 1

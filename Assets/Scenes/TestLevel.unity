@@ -703,6 +703,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11458994, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 641951794}
+    - target: {fileID: 11495776, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
+      propertyPath: Health
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
   m_IsPrefabParent: 0
@@ -818,8 +826,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: .100000001
   jumpSpeed: 360
-  onFloor: 0
+  glideSpeed: 0
+  maxJumps: 0
+  jumpCount: 0
+  gliding: 0
+  dead: 0
   rb: {fileID: 641951796}
+  spawn: {fileID: 0}
 --- !u!114 &641951801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,28 +2270,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0ce7fee25caef1b47babb27a3d8ce5c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1733919884 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 155310, guid: b1883fa7a78624e40b7583a5502fbc5a, type: 2}
-  m_PrefabInternal: {fileID: 536574888}
---- !u!114 &1733919885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733919884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89baa484dc68a9469935df8b14dd95c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 103750, guid: b57bd5f822d62d34a9a326d8a423db43, type: 2}
-  Target: {fileID: 641951794}
-  FireRate: .200000003
-  FireAmount: 5
-  FireSpread: 90
-  FireSpeed: 20
-  CanFire: 0
 --- !u!1 &1776219838
 GameObject:
   m_ObjectHideFlags: 0

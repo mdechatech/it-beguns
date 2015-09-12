@@ -39,6 +39,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f78af0dda531f7488a445f59238e367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelOrder:
+  - SplashScreen
+  - TestLevel
+  - 
+  - 
   Player: {fileID: 0}
   Boss: {fileID: 0}
   Wins: 0

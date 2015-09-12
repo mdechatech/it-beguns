@@ -65,7 +65,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -85,6 +84,69 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!127 &5
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!1001 &67594327
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11485806, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: LevelOrder.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 456014, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485806, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: LevelOrder.Array.data[0]
+      value: TestLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485806, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+      propertyPath: LevelOrder.Array.data[1]
+      value: MenuScene
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1c7886a80c12220418ac8144d08536bf, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &67594328 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11485806, guid: 1c7886a80c12220418ac8144d08536bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 67594327}
+  m_Script: {fileID: 11500000, guid: 5f78af0dda531f7488a445f59238e367, type: 3}
 --- !u!1 &523694266
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,12 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0ef18232c547b7d49bf1590f443adc67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -327,7 +383,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11488040, guid: 45616935e4fe10f48b62da1347801a16, type: 2}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 67594328}
+    m_RemovedComponents:
+    - {fileID: 11402634, guid: 45616935e4fe10f48b62da1347801a16, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 45616935e4fe10f48b62da1347801a16, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &885834508 stripped
@@ -372,7 +433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404792, guid: ecc0be9c3d4f1ed42bda45b243417e0a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecc0be9c3d4f1ed42bda45b243417e0a, type: 2}
@@ -445,7 +506,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
