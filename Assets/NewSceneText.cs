@@ -10,10 +10,7 @@ public class NewSceneText : MonoBehaviour {
 	{
 	    _manager = GameObject.FindGameObjectWithTag("Manager")
 	        .GetComponent<Manager>();
-	    if (_manager != null && _manager.Boss != null)
-	    {
-	        _manager.Boss.gameObject.SetActive(false);
-	    }
+
 		canvas = GetComponent<CanvasGroup> ();
 		canvas.alpha = 0f;
 	}
@@ -39,11 +36,6 @@ public class NewSceneText : MonoBehaviour {
 
 	    if (canvas.alpha <= 0.0f)
 	    {
-            if (_manager != null && _manager.Boss != null)
-            {
-                _manager.Boss.gameObject.SetActive(true);
-            }
-
             Destroy(gameObject);
 	    }
 	}
