@@ -12,6 +12,7 @@ GameObject:
   - 58: {fileID: 5820432}
   - 212: {fileID: 21209198}
   - 96: {fileID: 9672196}
+  - 114: {fileID: 11409880}
   m_Layer: 0
   m_Name: Dog Bullet
   m_TagString: Bullet
@@ -58,7 +59,7 @@ TrailRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -69,7 +70,7 @@ TrailRenderer:
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Time: 1
@@ -81,18 +82,29 @@ TrailRenderer:
       rgba: 4278190335
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190335
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190320
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190335
     m_Color[4]:
       serializedVersion: 2
-      rgba: 16777215
+      rgba: 255
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
+--- !u!114 &11409880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8788217a41d753843ba0818110c76b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21209198
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!224 &22400652
 RectTransform:
   m_ObjectHideFlags: 1
@@ -165,15 +177,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Sprite
@@ -195,6 +207,34 @@ Prefab:
       propertyPath: m_EndWidth
       value: .0199999996
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LightmapParameters
+      value: 
+      objectReference: {fileID: 15200, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseLightProbes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[1].rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[2].rgba
+      value: 4278190320
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[3].rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[4].rgba
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103750}
