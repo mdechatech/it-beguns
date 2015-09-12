@@ -21,6 +21,10 @@ public class PlayerMotion : MonoBehaviour {
 
     public Manager m;
 
+	public AudioClip hop;
+	public AudioClip glide;
+	public float time = 1f;
+
 	// Use this for initialization
 	void Start () {
         m = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
@@ -40,6 +44,7 @@ public class PlayerMotion : MonoBehaviour {
         {
             rb.AddForce(Vector2.up * jumpSpeed);
             jumpCount++;
+			AudioSource.PlayClipAtPoint(hop, Camera.main.transform.position,.5f);
         }
         else if (jumpCount == maxJumps && Input.GetKeyDown(KeyCode.W))
             gliding = true;
@@ -47,6 +52,7 @@ public class PlayerMotion : MonoBehaviour {
         if (canGlide && gliding && Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector2(0, glideSpeed);
+
         }
         else if (gliding && Input.GetKeyUp(KeyCode.W))
             gliding = false;

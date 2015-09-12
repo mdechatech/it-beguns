@@ -133,6 +133,14 @@ Prefab:
       value: 
       objectReference: {fileID: 11485806, guid: 1c7886a80c12220418ac8144d08536bf,
         type: 2}
+    - target: {fileID: 11490918, guid: db2638302a5939e40ab89ad9e1c8386f, type: 2}
+      propertyPath: temp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490918, guid: db2638302a5939e40ab89ad9e1c8386f, type: 2}
+      propertyPath: hop
+      value: 
+      objectReference: {fileID: 8300000, guid: 4727de097e9b7d5438f2dff992f8d63c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2638302a5939e40ab89ad9e1c8386f, type: 2}
   m_IsPrefabParent: 0
