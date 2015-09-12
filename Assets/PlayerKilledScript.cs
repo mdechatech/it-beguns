@@ -10,7 +10,11 @@ public class PlayerKilledScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    if(transform.position.y < -15)
+        {
+            PlayerMotion pm = GetComponent<PlayerMotion>();
+            pm.dead = true;
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D c)
