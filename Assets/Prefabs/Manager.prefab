@@ -45,6 +45,8 @@ MonoBehaviour:
   - ActualLevel 4
   - ActualLevel 2
   - ActualLevel 5
+  - ActualLevel 6
+  - ActualLevel 7
   Player: {fileID: 0}
   Boss: {fileID: 0}
   GameUI: {fileID: 0}
@@ -56,6 +58,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: LevelOrder.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Player
       value: 
@@ -71,6 +77,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: 
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: LevelOrder.Array.data[5]
+      value: ActualLevel 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: LevelOrder.Array.data[6]
+      value: ActualLevel 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
